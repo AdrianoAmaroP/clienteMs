@@ -12,7 +12,9 @@ public class ValidarClienteUseCase {
         this.clienteGateway = clienteGateway;
     }
 
-    public boolean clienteExiste(Long id) {
+    public boolean clienteExistePeloId(Long id) {
         return clienteGateway.existePorId(id);
     }
+
+    public boolean clienteExistePeloCpf(String cpf) {return clienteGateway.existePorCpf(cpf); }
 }
