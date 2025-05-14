@@ -20,11 +20,11 @@ public class ClienteEntity {
     private LocalDate dataNascimento;
 
     @Embedded
-    private Endereco endereco;
+    private EnderecoEntity endereco;
 
     public ClienteEntity() {}
 
-    public ClienteEntity(Long id, String nome, String cpf, LocalDate dataNascimento, Endereco endereco) {
+    public ClienteEntity(Long id, String nome, String cpf, LocalDate dataNascimento, EnderecoEntity endereco) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -34,6 +34,42 @@ public class ClienteEntity {
 
     public Long getId() {
         return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public EnderecoEntity getEndereco() {
+        return endereco;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setEndereco(EnderecoEntity endereco) {
+        this.endereco = endereco;
     }
 }
 
